@@ -38,8 +38,10 @@
         el_up.innerHTML = today;
 
         function gfg_Run() {
-            var aEl = document.getElementById("a");
-            var newEl = document.createElement("input");
+            let aEl = document.getElementById("a");
+            let newEl = document.createElement("input");
+            // newE1.setAttribute('type', 'text');
+            newE1.value = "fuck";
             aEl.parentNode.replaceChild(newEl, aEl);
             el_down.innerHTML =
                 "<a> element is replaced by the <span> element.";
