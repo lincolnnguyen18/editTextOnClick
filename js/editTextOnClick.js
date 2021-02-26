@@ -31,6 +31,16 @@ function toggleTextField(item, list) {
     console.log(item.innerHTML);
     let inputTextField = document.createElement("input");
     inputTextField.value = item.innerHTML;
+
+    inputTextField.style
+
+    inputTextField.addEventListener('keyup', ({key}) => {
+        if (key === 'Enter') {
+            // console.log(inputTextField.value);
+            untoggleTextField(list);
+        }
+    })
+
     item.replaceWith(inputTextField);
 }
 
