@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JavaScript | Replace dom element in place.
+    </title>
+</head>
+
+<body style="text-align:center;" id="body">
+
+    <!-- <input
+        type="text"
+        class="new list"
+        data-new-list-input
+        placeholder="new list name"
+    /> -->
+
+
+    <h1 style="color:green;">
+        GeeksforGeeks
+    </h1>
+    <p id="GFG_UP" style="font-size: 15px; font-weight: bold;">
+    </p>
+    <div>
+        <a id="a" href="#">GeeksforGeeks</a>
+    </div>
+    <br>
+    <button onclick="gfg_Run()">
+        Click here
+    </button>
+    <p id="GFG_DOWN" style="color:green; font-size: 20px; font-weight: bold;">
+    </p>
+    <script>
+        var el_up = document.getElementById("GFG_UP");
+        var el_down = document.getElementById("GFG_DOWN");
+        var today = 'Click button to replace <a> element in DOM';
+        el_up.innerHTML = today;
+
+        function gfg_Run() {
+            var aEl = document.getElementById("a");
+            var newEl = document.createElement("span");
+            newEl.innerHTML = "replaced text!";
+            aEl.parentNode.replaceChild(newEl, aEl);
+            el_down.innerHTML =
+                "<a> element is replaced by the <span> element.";
+        } 
+    </script>
+</body>
+
+</html>
