@@ -39,8 +39,7 @@
 
         function gfg_Run() {
             var aEl = document.getElementById("a");
-            var newEl = document.createElement("span");
-            newEl.innerHTML = "replaced text!";
+            var newEl = document.createElement("input");
             aEl.parentNode.replaceChild(newEl, aEl);
             el_down.innerHTML =
                 "<a> element is replaced by the <span> element.";
